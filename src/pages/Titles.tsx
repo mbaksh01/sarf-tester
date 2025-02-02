@@ -20,12 +20,14 @@ export default function Titles() {
         {!startQuiz && (
           <>
             <h1 className="text-2xl">Select test options</h1>
-            <div className="flex gap-4">
+            <div className="flex-col gap-4 justify-center *:mb-4 !mb-0">
               <div>
-                <h2 className="text-center text-xl mb-4">Titles</h2>
+                <h2 className="text-center text-xl mb-4">
+                  Titles you want to test
+                </h2>
                 <TitleSelector onSelectionChange={handleSelectionChange} />
               </div>
-              <div className="bg-neutral-600 w-0.5 max-h-screen"></div>
+              <div className="bg-neutral-600 w-full h-[1px]"></div>
               <div>
                 <h2 className="text-center text-xl mb-4">Options</h2>
                 <div className="flex flex-col">

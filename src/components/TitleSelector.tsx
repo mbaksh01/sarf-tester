@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 const titles = [
@@ -68,7 +69,10 @@ export default function TitleSelector({
             checked={selectedTitles.includes(title.name)}
             onChange={() => handleTitleSelect(title.name)}
           />
-          <label htmlFor={`title-${i}`} className="select-none">
+          <label
+            htmlFor={`title-${i}`}
+            className="select-none whitespace-nowrap"
+          >
             {title.name}
           </label>
         </li>

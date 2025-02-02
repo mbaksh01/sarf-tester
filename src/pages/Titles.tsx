@@ -1,6 +1,41 @@
 import React, { useState } from "react";
 import TitleSelector from "../components/TitleSelector.tsx";
-import Quiz from "../components/Quiz.tsx";
+import ReadTable from "../components/ReadTable.tsx";
+
+const titles = [
+  {
+    name: "ماضى معروف مثبت",
+    translation: "Past Tense Active Positive",
+  },
+  {
+    name: "ماضى معروف منفى",
+    translation: "Past Tense Active Negative",
+  },
+  {
+    name: "ماضى مجهول مثبت",
+    translation: "Past Tense Passive Positive",
+  },
+  {
+    name: "ماضى مجهول منفى",
+    translation: "Past Tense Passive Negative",
+  },
+  {
+    name: "مضارع معروف مثبت",
+    translation: "Present/Future Tense Active Positive",
+  },
+  {
+    name: "مضارع معروف منفى",
+    translation: "Present/Future Tense Active Negative",
+  },
+  {
+    name: "مضارع مجهول مثبت",
+    translation: "Present/Future Tense Passive Positive",
+  },
+  {
+    name: "مضارع مجهول منفى",
+    translation: "Present/Future Tense Passive Negative",
+  },
+];
 
 export default function Titles() {
   const [selectedTitles, setSelectedTitles] = useState<string[]>([]);
@@ -25,7 +60,10 @@ export default function Titles() {
                 <h2 className="text-center text-xl mb-4">
                   Titles you want to test
                 </h2>
-                <TitleSelector onSelectionChange={handleSelectionChange} />
+                <TitleSelector
+                  titles={titles}
+                  onSelectionChange={handleSelectionChange}
+                />
               </div>
               <div className="bg-neutral-600 w-full h-[1px]"></div>
               <div>
@@ -57,7 +95,7 @@ export default function Titles() {
         )}
 
         {startQuiz && (
-          <Quiz selectedTitles={selectedTitles} numberOfQuestions={10} />
+          <ReadTable selectedTitles={selectedTitles} numberOfQuestions={10} />
         )}
       </div>
     </main>

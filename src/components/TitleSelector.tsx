@@ -1,44 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
-const titles = [
-  {
-    name: "ماضى معروف مثبت",
-    translation: "Past Tense Active Positive",
-  },
-  {
-    name: "ماضى معروف منفى",
-    translation: "Past Tense Active Negative",
-  },
-  {
-    name: "ماضى مجهول مثبت",
-    translation: "Past Tense Passive Positive",
-  },
-  {
-    name: "ماضى مجهول منفى",
-    translation: "Past Tense Passive Negative",
-  },
-  {
-    name: "مضارع معروف مثبت",
-    translation: "Present/Future Tense Active Positive",
-  },
-  {
-    name: "مضارع معروف منفى",
-    translation: "Present/Future Tense Active Negative",
-  },
-  {
-    name: "مضارع مجهول مثبت",
-    translation: "Present/Future Tense Passive Positive",
-  },
-  {
-    name: "مضارع مجهول منفى",
-    translation: "Present/Future Tense Passive Negative",
-  },
-];
-
 export default function TitleSelector({
+  titles,
   onSelectionChange,
 }: {
+  titles: { name: string }[];
   onSelectionChange?: (selectedTitles: string[]) => void;
 }) {
   const [selectedTitles, setSelectedTitles] = useState<string[]>([]);

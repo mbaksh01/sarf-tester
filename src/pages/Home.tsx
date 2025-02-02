@@ -10,13 +10,19 @@ export default function Home() {
           to="/titles"
           className="text-3xl mb-4 p-2 border w-full rounded-lg cursor-pointer text-center hover:bg-gray-100"
         >
-          Titles
+          Read full Tables
+        </NavLink>
+        <NavLink
+          to="/"
+          className="text-3xl mb-4 p-2 border w-full rounded-lg cursor-pointer text-center hover:bg-gray-100"
+        >
+          Translate Titles
         </NavLink>
         <NavLink
           to="/words"
           className="text-3xl mb-4 p-2 border w-full rounded-lg cursor-pointer text-center hover:bg-gray-100"
         >
-          Individual Words
+          Translate Words
         </NavLink>
       </div>
     </main>

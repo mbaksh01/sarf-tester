@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-interface QuizProps {
+interface ReadTableProps {
   selectedTitles: string[];
   numberOfQuestions: number;
 }
@@ -25,7 +25,10 @@ const getRandomVerb = () => {
   return verbs[randomIndex].verb;
 };
 
-export default function Quiz({ selectedTitles, numberOfQuestions }: QuizProps) {
+export default function ReadTable({
+  selectedTitles,
+  numberOfQuestions,
+}: ReadTableProps) {
   const [index, setIndex] = useState(0);
   const [questions, setQuestions] = useState<{ title: string; verb: string }[]>(
     []
